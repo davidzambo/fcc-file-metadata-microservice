@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        title="File metadata microservice"
+        link(href='https://www.dcmf.hu/favicon.ico' rel='icon')
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet")
+        link(href='/css/styles.css', rel='stylesheet')
+    body.container-fluid
+        div.row.justify-content-center.h-100
+            div.col-12.col-md-10.col-lg-8.col-xl-4
+                div.card
+                    div.card-body
+                        h1 szia
+                        form(action="/" method="post" enctype="multipart/form-data")
+                            div.form-group
+                                input(
+                                    type="file"
+                                    name="file"
+                                    required
+                                )
+                            button.btn.btn-primary(type="submit") send
