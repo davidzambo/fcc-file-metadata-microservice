@@ -20,11 +20,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', upload.single('file'), (req, res) => {
-    console.log(req);
-    const file = req.file;
-    delete file.buffer;
-    delete file.fieldname;
-    res.json({file});
+    if (req.file.size > 10000000)
+        return res.json({error: 'File size exceedes the 10Mb limit.'});
+    return res.json({size: req.file.size});
 })
 
 app.listen(PORT, (err) =>{

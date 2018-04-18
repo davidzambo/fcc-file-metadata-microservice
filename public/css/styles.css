@@ -1,9 +1,26 @@
 body {
-    background-color: green;
     height: 100%;
 }
 
-.row {
-    height: 100%;
-    background-color: red;
+.container-fluid {
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+    border-left: 1rem solid red;
+    padding-left: 1rem;
+}
+
+li:first-child{
+    padding-bottom: 1rem;
+}
+
+footer{
+    font-size: 0.7rem;
+    padding: 0.8rem 0 0 0;
+}
+footer img {
+    max-width: 40px;
+    height: auto;
 }
